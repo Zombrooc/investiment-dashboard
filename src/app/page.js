@@ -21,58 +21,70 @@ export default function Home() {
       <div className="w-full p-3">
         <div className=" w-full p-5">
           <div className="flex w-full items-center space-x-2">
-            <Input type="text" placeholder="Pesquisar Ação, FII, Stocks, ..." className="w-full" />
-            <Button variant="outline" size="icon">
-              <MagnifyingGlassIcon className="h-4 w-4" />
+            <Input type="text" placeholder="Pesquisar Ação, FII, Stocks, ..." className="w-full h-12" />
+            <Button variant="outline" size="icon" className="h-12 w-12">
+              <MagnifyingGlassIcon className="h-6 w-6" />
             </Button>
-            <Button variant="outline" size="icon">
-              <PlusIcon className="h-4 w-4" />
+            <Button variant="outline" size="icon" className="h-12 w-12">
+              <PlusIcon className="h-6 w-6" />
             </Button>
           </div>
-          <div className="flex flex-row gap-5">
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Card Content</p>
-              </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
+          <div className="flex flex-col p-5">
+            <div className="flex justify-between">
+              <p className="leading-7">
+                Visão Geral
+              </p>
+              <p className="leading-7">
+                Ver Tudo
+              </p>
+            </div>
+            <div className="grid grid-cols-3 gap-4 mt-7">
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Card Content</p>
-              </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Card Title</CardTitle>
+                  <CardDescription>Card Description</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+                <CardFooter>
+                  <p>Card Footer</p>
+                </CardFooter>
+              </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>Card Content</p>
-              </CardContent>
-              <CardFooter>
-                <p>Card Footer</p>
-              </CardFooter>
-            </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Card Title</CardTitle>
+                  <CardDescription>Card Description</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+                <CardFooter>
+                  <p>Card Footer</p>
+                </CardFooter>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Card Title</CardTitle>
+                  <CardDescription>Card Description</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+                <CardFooter>
+                  <p>Card Footer</p>
+                </CardFooter>
+              </Card>
+            </div>
+
 
           </div>
         </div>
       </div>
-      <div className="w-52">
+      <div className="w-80">
         asjhaushuahsh
       </div>
     </div >
