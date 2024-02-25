@@ -16,9 +16,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={cn(
-        "h-screen bg-background font-sans antialiased",
+        "bg-background font-sans antialiased",
         fontSans.variable
       )}>{children}</body>
     </html>
