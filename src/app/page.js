@@ -2,21 +2,8 @@
 import { MagnifyingGlassIcon, PieChartIcon, TriangleUpIcon, EyeOpenIcon, ReaderIcon, BellIcon, BookmarkIcon } from '@radix-ui/react-icons'
 import { ResponsiveContainer, Tooltip, AreaChart, Area } from 'recharts';
 
-import { columns } from "@/components/columns.js"
-import { DataTable } from "@/components/data-table.js"
-
-async function getData() {
-  // Fetch data from your API here.
-  return [
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    // ...
-  ]
-}
+import { columns } from "@/components/StockHistory/columns.js"
+import { DataTable } from "@/components/StockHistory/data-table.js"
 
 const data1 = [];
 const data2 = [];
@@ -62,7 +49,30 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 
 export default function Home() {
 
-  const data = getData()
+  const data = [{
+    stockSymbol: 'MXRF11',
+    stockName: 'Maxi Renda Fundo Invest Imobiliario FII',
+    type: 'Venda',
+    numberOfQuotas: 1,
+    unitPrice: '10,91',
+    totalAmount: '10,91'
+  },
+  {
+    stockSymbol: 'MXRF11',
+    stockName: 'Maxi Renda Fundo Invest Imobiliario FII',
+    type: 'Compra',
+    numberOfQuotas: 1,
+    unitPrice: '10,91',
+    totalAmount: '10,91'
+  },
+  {
+    stockSymbol: 'MXRF11',
+    stockName: 'Maxi Renda Fundo Invest Imobiliario FII',
+    type: 'Compra',
+    numberOfQuotas: 1,
+    unitPrice: '10,91',
+    totalAmount: '10,91'
+  },]
 
   return (
     <div className="flex flex-col md:flex-row">
