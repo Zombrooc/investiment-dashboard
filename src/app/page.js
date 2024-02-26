@@ -1,7 +1,6 @@
 'use client'
-import Image from "next/image";
-import { MagnifyingGlassIcon, PlusIcon, PieChartIcon, ChevronUpIcon, TriangleUpIcon, EyeOpenIcon, ReaderIcon, BellIcon, BookmarkIcon } from '@radix-ui/react-icons'
-import { LineChart, Line, ResponsiveContainer, Tooltip } from 'recharts';
+import { MagnifyingGlassIcon, PieChartIcon, TriangleUpIcon, EyeOpenIcon, ReaderIcon, BellIcon, BookmarkIcon } from '@radix-ui/react-icons'
+import { ResponsiveContainer, Tooltip, AreaChart, Area } from 'recharts';
 
 const data1 = [];
 const data2 = [];
@@ -16,18 +15,18 @@ for (let i = 0; i < 12; i++) {
   data1.push(d);
 }
 
-const rand2 = 200;
+const rand2 = 150;
 for (let i = 0; i < 12; i++) {
   let d = {
-    value: { x: Math.random() * (rand + 50) + 100 }
+    value: { x: Math.random() * (rand2 + 50) + 100 }
   };
 
   data2.push(d);
 }
-const rand3 = 200;
+const rand3 = 500;
 for (let i = 0; i < 12; i++) {
   let d = {
-    value: { x: Math.random() * (rand + 50) + 100 }
+    value: { x: Math.random() * (rand3 + 50) + 100 }
   };
 
   data3.push(d);
@@ -38,13 +37,9 @@ import { Separator } from "@/components/ui/separator"
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
 
@@ -88,10 +83,10 @@ export default function Home() {
               <CardContent className="pb-0">
                 <Separator className="mb-4" />
                 <ResponsiveContainer width="100%" height={150}>
-                  <LineChart width={150} height={150} data={data1}>
+                  <AreaChart width={150} height={150} data={data1}>
                     <Tooltip />
-                    <Line type="monotone" dataKey="value.x" stroke="#fff" dot={true} />
-                  </LineChart>
+                    <Area type="monotone" dataKey="value.x" stroke="#fff" dot={true} fill="#3b82f6" />
+                  </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
@@ -111,10 +106,10 @@ export default function Home() {
               <CardContent className="pb-0">
                 <Separator className="mb-4" />
                 <ResponsiveContainer width="100%" height={150}>
-                  <LineChart width={150} height={150} data={data2}>
+                  <AreaChart width={150} height={150} data={data2}>
                     <Tooltip />
-                    <Line type="monotone" dataKey="value.x" stroke="#fff" dot={true} />
-                  </LineChart>
+                    <Area type="monotone" dataKey="value.x" stroke="#fff" dot={true} fill="#4ade80" />
+                  </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
@@ -134,10 +129,10 @@ export default function Home() {
               <CardContent className="pb-0">
                 <Separator className="mb-4" />
                 <ResponsiveContainer width="100%" height={150}>
-                  <LineChart width={150} height={150} data={data3}>
+                  <AreaChart width={150} height={150} data={data3}>
                     <Tooltip />
-                    <Line type="monotone" dataKey="value.x" stroke="#fff" dot={true} />
-                  </LineChart>
+                    <Area type="monotone" dataKey="value.x" stroke="#fff" dot={true} fill="#a78bfa" />
+                  </AreaChart>
                 </ResponsiveContainer>
               </CardContent>
             </Card>
