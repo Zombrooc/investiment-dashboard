@@ -2,6 +2,22 @@
 import { MagnifyingGlassIcon, PieChartIcon, TriangleUpIcon, EyeOpenIcon, ReaderIcon, BellIcon, BookmarkIcon } from '@radix-ui/react-icons'
 import { ResponsiveContainer, Tooltip, AreaChart, Area } from 'recharts';
 
+import { columns } from "@/components/columns.js"
+import { DataTable } from "@/components/data-table.js"
+
+async function getData() {
+  // Fetch data from your API here.
+  return [
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    // ...
+  ]
+}
+
 const data1 = [];
 const data2 = [];
 const data3 = [];
@@ -31,6 +47,7 @@ for (let i = 0; i < 12; i++) {
 
   data3.push(d);
 }
+
 import { Input } from "@/components/ui/input"
 import Sidebar from '@/components/Sidebar';
 import { Separator } from "@/components/ui/separator"
@@ -44,6 +61,9 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 
 
 export default function Home() {
+
+  const data = getData()
+
   return (
     <div className="flex flex-col md:flex-row">
       <Sidebar />
@@ -140,6 +160,9 @@ export default function Home() {
 
 
         </div>
+        <div className="container mx-auto py-10">
+          <DataTable columns={columns} data={data} />
+        </div>
       </div>
       <div className="h-screen max-w-full md:w-1/4 lg:h-screen p-7 flex flex-col">
         <div className="h-1/3 flex flex-col mb-3 ">
@@ -227,45 +250,9 @@ export default function Home() {
               </div>
               <div className="flex flex-col text-gray-700 w-full">
                 <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
+                  <p className="text-sm font-bold">MXRF11</p>
                 </div>
-                <p className="text-base font-bold ml-2 text-green-500">+1,5% | R$ 10,00</p>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center mb-5 md:flex-col lg:flex-row">
-              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
-                <PieChartIcon className="w-6 h-6 " />
-              </div>
-              <div className="flex flex-col text-gray-700 w-full">
-                <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
-                </div>
-                <p className="text-base font-bold ml-2 text-green-500">+1,5% | R$ 10,00</p>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center mb-5 md:flex-col lg:flex-row">
-              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
-                <PieChartIcon className="w-6 h-6 " />
-              </div>
-              <div className="flex flex-col text-gray-700 w-full">
-                <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
-                </div>
-                <p className="text-base font-bold ml-2 text-green-500">+1,5% | R$ 10,00</p>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center mb-5 md:flex-col lg:flex-row">
-              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
-                <PieChartIcon className="w-6 h-6 " />
-              </div>
-              <div className="flex flex-col text-gray-700 w-full">
-                <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
-                </div>
-                <p className="text-base font-bold ml-2 text-green-500">+1,5% | R$ 10,00</p>
+                <p className="text-sm font-bold ml-2 text-green-500">+1,5% | R$ 10,00</p>
               </div>
             </div>
           </ScrollArea>
@@ -285,47 +272,13 @@ export default function Home() {
               </div>
               <div className="flex flex-col text-gray-700 w-full">
                 <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
+                  <p className="text-sm font-bold">MXRF11</p>
                 </div>
-                <p className="text-base font-bold ml-2 text-red-500">-1,5% | R$ 10,00</p>
+                <p className="text-sm font-bold ml-2 text-red-500">-1,5% | R$ 10,00</p>
               </div>
             </div>
 
-            <div className="flex flex-row items-center mb-5 md:flex-col lg:flex-row">
-              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
-                <PieChartIcon className="w-6 h-6 " />
-              </div>
-              <div className="flex flex-col text-gray-700 w-full">
-                <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
-                </div>
-                <p className="text-base font-bold ml-2 text-red-500">-1,5% | R$ 10,00</p>
-              </div>
-            </div>
 
-            <div className="flex flex-row items-center mb-5 md:flex-col lg:flex-row">
-              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
-                <PieChartIcon className="w-6 h-6 " />
-              </div>
-              <div className="flex flex-col text-gray-700 w-full">
-                <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
-                </div>
-                <p className="text-base font-bold ml-2 text-red-500">-1,5% | R$ 10,00</p>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center mb-5 md:flex-col lg:flex-row">
-              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
-                <PieChartIcon className="w-6 h-6 " />
-              </div>
-              <div className="flex flex-col text-gray-700 w-full">
-                <div className="ml-2 align-center justify-between md:justify-start lg:justify-between">
-                  <p className=" font-bold">MXRF11</p>
-                </div>
-                <p className="text-base font-bold ml-2 text-red-500">-1,5% | R$ 10,00</p>
-              </div>
-            </div>
 
           </ScrollArea>
         </div>
