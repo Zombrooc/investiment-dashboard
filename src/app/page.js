@@ -144,7 +144,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full md:w-1/4 lg:h-screen p-7 flex flex-col">
-        <div className="flex flex-col mb-5">
+        <div className="h-full bg-red-500 flex flex-col mb-3">
           {/* <p> Minhas ações </p> */}
           <div className="flex">
             <BookmarkIcon className="w-6 h-6 mr-5" />
@@ -157,14 +157,14 @@ export default function Home() {
           </div>
           <Separator className="my-4" />
           <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
-            <div className="flex flex-col md:flex-row items center mb-5">
-              <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+            <div className="flex flex-row items center mb-5 md:flex-col lg:flex-row">
+              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
                 <PieChartIcon className="w-6 h-6 " />
               </div>
               <div className="flex flex-col text-gray-700 w-full">
-                <div className="flex flex-col lg:flex-row ml-2 align-center justify-between">
+                <div className="flex flex-row md:flex-col 2xl:flex-row ml-2 align-center justify-between md:justify-start lg:justify-between">
                   <p className="text-sm font-bold">MXRF11</p>
-                  <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  <p className="text-sm ml-4 font-bold md:ml-0 2xl:ml-4">3 un. | R$ 100,00</p>
                 </div>
                 <div className="mt-1 ml-2 text-sm">
                   <p className=""><span className="font-bold">10%</span> dos investimentos</p>
@@ -356,6 +356,431 @@ export default function Home() {
             </ScrollArea>
           </div> */}
         </div>
+        <div className="h-full bg-purple-500 flex flex-col mb-3">
+          {/* <p> Minhas ações </p> */}
+          <div className="flex">
+            <BookmarkIcon className="w-6 h-6 mr-5" />
+            <p className="leading-7 font-bold text-lg">
+              Favoritos
+            </p>
+            {/* <p className="leading-7 text-sm">
+                Valor Total: <span className="text-xl font-bold">R$ 200</span>
+              </p> */}
+          </div>
+          <Separator className="my-4" />
+          <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
+            <div className="flex flex-row items center mb-5 md:flex-col lg:flex-row">
+              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                <PieChartIcon className="w-6 h-6 " />
+              </div>
+              <div className="flex flex-col text-gray-700 w-full">
+                <div className="flex flex-row md:flex-col 2xl:flex-row ml-2 align-center justify-between md:justify-start lg:justify-between">
+                  <p className="text-sm font-bold">MXRF11</p>
+                  <p className="text-sm ml-4 font-bold md:ml-0 2xl:ml-4">3 un. | R$ 100,00</p>
+                </div>
+                <div className="mt-1 ml-2 text-sm">
+                  <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                </div>
+              </div>
+            </div>
+            {/* <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div> */}
+          </ScrollArea>
+
+          {/* <div className="mb-5">
+            <div className="flex justify-between">
+              <p className="leading-7 font-bold text-lg">
+                Maiores Altas
+              </p>
+            </div>
+            <Separator className="my-4" />
+            <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-green-500">+1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-green-500">+1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-green-500">+1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollArea>
+          </div>
+
+          <div className="">
+            <div className="flex justify-between">
+              <p className="leading-7 font-bold text-lg">
+                Maiores Baixas
+              </p>
+            </div>
+            <Separator className="my-4" />
+            <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-red-500">-1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-red-500">-1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-red-500">-1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </ScrollArea>
+          </div> */}
+        </div>
+        <div className="h-full bg-purple-500 flex flex-col mb-3">
+          {/* <p> Minhas ações </p> */}
+          <div className="flex">
+            <BookmarkIcon className="w-6 h-6 mr-5" />
+            <p className="leading-7 font-bold text-lg">
+              Favoritos
+            </p>
+            {/* <p className="leading-7 text-sm">
+                Valor Total: <span className="text-xl font-bold">R$ 200</span>
+              </p> */}
+          </div>
+          <Separator className="my-4" />
+          <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
+            <div className="flex flex-row items center mb-5 md:flex-col lg:flex-row">
+              <div className="md:w-full lg:w-16 h-16 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                <PieChartIcon className="w-6 h-6 " />
+              </div>
+              <div className="flex flex-col text-gray-700 w-full">
+                <div className="flex flex-row md:flex-col 2xl:flex-row ml-2 align-center justify-between md:justify-start lg:justify-between">
+                  <p className="text-sm font-bold">MXRF11</p>
+                  <p className="text-sm ml-4 font-bold md:ml-0 2xl:ml-4">3 un. | R$ 100,00</p>
+                </div>
+                <div className="mt-1 ml-2 text-sm">
+                  <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                </div>
+              </div>
+            </div>
+            {/* <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mb-5">
+              <div className="flex flex-row items-center">
+                <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                  <PieChartIcon className="w-6 h-6 " />
+                </div>
+                <div className="flex flex-col text-gray-700 w-full">
+                  <div className="flex flex-row ml-2 align-center  justify-between">
+                    <p className="text-sm font-bold">MXRF11</p>
+                    <p className="text-sm font-bold ml-4">3 un. | R$ 100,00</p>
+                  </div>
+                  <div className="mt-1 ml-2 text-sm">
+                    <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                  </div>
+                </div>
+              </div>
+            </div> */}
+          </ScrollArea>
+
+          {/* <div className="mb-5">
+            <div className="flex justify-between">
+              <p className="leading-7 font-bold text-lg">
+                Maiores Altas
+              </p>
+            </div>
+            <Separator className="my-4" />
+            <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-green-500">+1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-green-500">+1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-green-500">+1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollArea>
+          </div>
+
+          <div className="">
+            <div className="flex justify-between">
+              <p className="leading-7 font-bold text-lg">
+                Maiores Baixas
+              </p>
+            </div>
+            <Separator className="my-4" />
+            <ScrollArea className="h-full w-full rounded-md px-4 flex flex-col">
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-red-500">-1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-red-500">-1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-7">
+                <div className="flex flex-row items-center">
+                  <div className="min-w-10 min-h-10 rounded-lg flex items-center justify-center text-blue-600 bg-slate-100	">
+                    <PieChartIcon className="w-6 h-6 " />
+                  </div>
+                  <div className="flex flex-col text-gray-700 w-full">
+                    <div className="flex flex-row ml-2 align-center  justify-between">
+                      <p className="text-sm font-bold">MXRF11</p>
+                      <p className="text-sm font-bold ml-4 text-red-500">-1,5% | R$ 10,00</p>
+                    </div>
+                    <div className="mt-1 ml-2 text-sm">
+                      <p className=""><span className="font-bold">10%</span> dos investimentos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </ScrollArea>
+          </div> */}
+        </div>
+
       </div>
     </div >
   );
