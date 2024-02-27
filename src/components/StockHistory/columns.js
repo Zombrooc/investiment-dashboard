@@ -1,21 +1,65 @@
 "use client"
 
+import { ArrowUpDown, MoreHorizontal } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+
 export const columns = [
   {
     accessorKey: "stockSymbol",
-    header: "Símbolo do Papel",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Símbolo do Papel
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
   },
   {
     accessorKey: "stockName",
-    header: "Nome do Papel",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Nome do Papel
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
   },
   {
     accessorKey: "type",
-    header: "Tipo",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Tipo
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
   },
   {
     accessorKey: "numberOfQuotas",
-    header: "Nº de Cotas",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Nº de Cotas
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
   },
   {
     accessorKey: "unitPrice",
@@ -26,8 +70,8 @@ export const columns = [
         style: "currency",
         currency: "BRL",
       }).format(amount)
- 
-      return <div className="text-right font-medium">{formatted}</div>
+
+      return <div className="font-medium">{formatted}</div>
     },
   },
   {
@@ -39,8 +83,8 @@ export const columns = [
         style: "currency",
         currency: "BRL",
       }).format(amount)
- 
-      return <div className="text-right font-medium">{formatted}</div>
+
+      return <div className="font-medium">{formatted}</div>
     },
   },
 ]
