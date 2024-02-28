@@ -146,6 +146,7 @@ export default function Home() {
 
 
         </div>
+        <Separator className="my-2" />
         <div>
           <DataTable columns={columns} data={data} />
         </div>
