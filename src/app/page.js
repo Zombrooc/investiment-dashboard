@@ -5,6 +5,17 @@ import { ResponsiveContainer, Tooltip, AreaChart, Area } from 'recharts';
 import { columns } from "@/components/StockHistory/columns.js"
 import { DataTable } from "@/components/StockHistory/data-table.js"
 
+import { Input } from "@/components/ui/input"
+import Sidebar from '@/components/Sidebar';
+import { Separator } from "@/components/ui/separator"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
+
 const data1 = [];
 const data2 = [];
 const data3 = [];
@@ -34,20 +45,6 @@ for (let i = 0; i < 12; i++) {
 
   data3.push(d);
 }
-
-import { Input } from "@/components/ui/input"
-import Sidebar from '@/components/Sidebar';
-import { Separator } from "@/components/ui/separator"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ScrollArea } from "@/components/ui/scroll-area"
-
-
-
 
 export default function Home() {
 

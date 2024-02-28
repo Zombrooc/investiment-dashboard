@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google"
 import "./globals.css";
 
 import { cn } from "@/lib/utils"
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={cn(
         "bg-background font-sans antialiased",
         fontSans.variable
-      )}>{children}</body>
+      )}><TooltipProvider delayDuration={0}>{children}</TooltipProvider></body>
     </html>
   );
 }

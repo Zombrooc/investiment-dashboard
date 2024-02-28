@@ -37,8 +37,14 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { toast } from "@/components/ui/use-toast"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 import logo from '@/assets/logo.svg'
+import { Separator } from "@/components/ui/separator"
 
 const FormSchema = z.object({
   dob: z.date({
@@ -64,18 +70,29 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="w-full p-3 flex sm:h-20 sm:align-start sm:flex-row lg:w-28 lg:h-screen md:flex-col md:justify-center ">
-      <Image src={logo} alt="site logo" className="w-10" />
+    <div className="w-full p-3 flex sm:h-20 lg:w-28 lg:h-screen lg:flex-col lg:items-center lg:align-center ">
+      <Image src={logo} alt="site logo" className="w-10 h-10" />
+      <Separator className="my-2" />
       <Drawer>
-        <DrawerTrigger asChild>
-          <Button
-            variant="outline"
-            className="h-14 w-14 shrink-0 rounded-full bg-primary hover:bg-primary-foreground"
-          >
-            <PlusIcon className="h-6 w-6 text-white hover:text-zinc-700" />
-            <span className="sr-only">Criar nova compra/venda</span>
-          </Button>
-        </DrawerTrigger>
+
+        <Tooltip delayDuration={0}>
+          <TooltipTrigger asChild>
+            <DrawerTrigger asChild>
+              <Button
+                variant="outline"
+                className="h-14 w-14 rounded-full bg-primary text-white hover:bg-primary-foreground hover:text-primary"
+              >
+                <PlusIcon className="h-6 w-6" />
+                <span className="sr-only">Criar nova compra/venda</span>
+              </Button>
+            </DrawerTrigger>
+
+          </TooltipTrigger>
+          <TooltipContent side="right">
+            <p>Criar nova compra/venda</p>
+          </TooltipContent>
+        </Tooltip>
+
         <DrawerContent>
           <div className="mx-auto w-full max-w-sm">
             <DrawerHeader>
