@@ -9,13 +9,6 @@ export const fontSans = FontSans({
   variable: "--font-sans",
 })
 
-export const viewport = {
-  width: 'device-width',
-  initialScale: 0.8,
-  maximumScale: 1,
-  userScalable: false,
-}
-
 export const metadata = {
   title: "Investiment Dashboard",
   description: "Plataforma criada para controle dos investimentos de ações, FIIs e afins",
